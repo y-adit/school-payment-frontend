@@ -31,13 +31,14 @@ const TransactionTable = ({ transactions, loading, error, filters, updateFilters
 
   if (loading) return <div className="text-center p-8">Loading transactions...</div>;
   if (error) return <div className="text-center p-8 text-red-500">{error}</div>;
-  if (transactions.length === 0) return <div className="text-center p-8 text-gray-500">No transactions found.</div>;
+  if (!transactions || transactions.length === 0) return <div className="text-center p-8 text-gray-500">No transactions found.</div>;
 
   return (
     <div className="overflow-x-auto">
       <table className="min-w-full bg-white">
         <thead className="bg-gray-50">
           <tr>
+            <th className="w-1"></th>
             {headers.map((header) => (
               <th
                 key={header.key}
@@ -55,7 +56,6 @@ const TransactionTable = ({ transactions, loading, error, filters, updateFilters
         <tbody className="divide-y divide-gray-200">
           {transactions.map((tx) => (
             <tr key={tx.collect_id} className="group hover:bg-gray-50 transition-colors duration-200">
-              {/* This empty div is for the hover effect line */}
               <td className="w-1 bg-transparent transition-all duration-300 group-hover:bg-blue-500"></td>
               <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 transition-transform duration-300 group-hover:translate-x-1">{tx.custom_order_id}</td>
               <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 transition-transform duration-300 group-hover:translate-x-1">{tx.school_id}</td>
