@@ -8,6 +8,7 @@ const statusColors = {
 };
 
 const TransactionTable = ({ transactions, loading, error, filters, updateFilters }) => {
+   console.log("Data received by table component:", transactions);
 
   const handleSort = (field) => {
     const newOrder = filters.sortBy === field && filters.order === 'asc' ? 'desc' : 'asc';
