@@ -6,9 +6,7 @@ Live Application URL:(https://schoolpaymentfrontend-eubl.onrender.com/)
 
 ---
 
-## Final Dashboard
 
-!(https://storage.googleapis.com/llm-assets/images/0726ac3e-1081-4fe1-9457-418c991e0a26.png)
 
 ---
 
