@@ -15,7 +15,7 @@ const Header = ({ filters, updateFilters }) => {
     <>
       <header className="bg-white shadow-sm p-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-gray-800">Payments Dashboard</h1>
+          <h1 className="text-2xl font-bold text-gray-800">Payments Dashboard - V2 TEST</h1>
           <div className="flex items-center gap-4">
             <button onClick={() => setIsModalOpen(true)} className="px-4 py-2 text-sm bg-gray-100 rounded-md hover:bg-gray-200">
               Check Status
